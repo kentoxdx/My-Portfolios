@@ -1,0 +1,29 @@
+/* 1. Import ฟอนต์ Prompt จาก Google Fonts ไว้บนสุด */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap');
+
+/* 2. Import Tailwind (ของ V4 จะใช้คำสั่งนี้แทน @tailwind base; ... ) */
+@import "tailwindcss";
+
+/* 3. ตั้งค่าให้ Prompt เป็นฟอนต์หลักของทั้งเว็บ */
+@theme{
+  --font-sans: "Prompt", sans-serif;
+
+  --color-primary-accent: #00f2fe;
+  --color-bg-dark: #0a0f16;
+  --color-surface-dark: #131b26;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+
+  --background-image-primary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  
+  --transition-duration-smooth: 400ms;
+  --transition-timing-function-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+}
+
+@layer utilities {
+  .transition-custom {
+    transition: all 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+  }
+
